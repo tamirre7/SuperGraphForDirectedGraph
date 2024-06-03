@@ -62,8 +62,12 @@ void Graph::AddEdge(int u, int v)
 // Check if there is an edge between nodes u and v.
 bool Graph::IsAdjacent(int u, int v) const
 {
+
     if (u < 0 || u > numNodes || v < 0 || v > numNodes)
-        throw GraphError("Invalid node index."); // Throw a GraphError with the error message
+    {
+        cout << "invalid input";
+        exit(1);
+    }    
 
     for (int neighbor : adjacencyList[u])  //searching the adjacencyList for v
         if (neighbor == v)
