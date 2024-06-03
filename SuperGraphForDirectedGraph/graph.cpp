@@ -55,8 +55,6 @@ void Graph::AddEdge(int u, int v)
         exit(1);
     }
 
-    //if there isnt already a edge from u to v well add it
-    if (!IsAdjacent(u, v))
         adjacencyList[u].push_back(v);
         
 }

@@ -39,6 +39,7 @@ int main()
     for (int i = 0; i < numEdges; ++i) {
         int u, v;
         cin >> u >> v;
+        if (!(graph.IsAdjacent(u,v)))
         graph.AddEdge(u, v);
     }
 
